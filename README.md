@@ -1,4 +1,25 @@
-# Steps
+# Tale of content
+- general info
+- technologies
+- project steps
+- sources
+- improvement plan
+## General info
+The goal of this project is to generate random messages and practice using GitHub, markdown and creating my first README.md file. 
+As the first step, it generates random insiprational messages.
+
+## Technologies
+- Node.js
+
+## Sources
+This project is inspired by codecademy full stack developer course. 
+
+## Improvement plan
+In further versions new categories will be added: 
+- GYM motivation
+- Jokes
+
+## **Steps**
 
 1. Creat 3 arrays with different motivational messages
 2. Creat nested arrays and loop through them 
@@ -23,11 +44,11 @@
 
     You are not your mistakes.
 
-    Don't let you fear own you. Own yourself.
+    Don't let your fear own you. Own yourself.
 
     Falling down is an accident, staying down is a choice.
 
-    If you are goind through hell keep going.
+    If you are going through hell keep going.
 
 - array 3
 
