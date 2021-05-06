@@ -1,32 +1,52 @@
 //container array for messages 
-let message1 = ['You are not weak.','Dont judge yourself by what others did to you.', 'We all make mistakes.', 'What hurts can be healed.', 'The secret of getting ahead is getting satarted.'];
-let message2 = ['You are not your mistake.', 'Dont let your fear own you. Own yourself.', 'Falling down is an accident, staying down is a choice.', 'If you are going through hell kepp going.'];
-let message3 = ['We keep fighting.', 'Care for yourself as much as you care for others.', 'People like us, we are brave.', 'You will never regret being kind.'];
+const messages = {
+message1 : ['You are not weak.','Dont judge yourself by what others did to you.', 'We all make mistakes.', 'What hurts can be healed.', 'The secret of getting ahead is getting satarted.'],
+message2 : ['You are not your mistake.', 'Dont let your fear own you. Own yourself.', 'Falling down is an accident, staying down is a choice.', 'If you are going through hell kepp going.'],
+message3 : ['We keep fighting.', 'Care for yourself as much as you care for others.', 'People like us, we are brave.', 'You will never regret being kind.']
+};
 
-//generate random message  
-const GenerateRandomMessage = (arr1, arr2, arr3)=>{
-    let message = []; 
+//generate random number
+const generateRandNumber = (num) =>{
+    return Math.floor(Math.random()*num)
+};
 
-    let randIndex1 = Math.floor(Math.random()*arr1.length);
-    let randIndex2 = Math.floor(Math.random()*arr2.length);
-    let randIndex3 = Math.floor(Math.random()*arr3.length);
+//finalMessage will contain the output that should be printed
+let finalMessage = [];
 
-    let randMessage1 = arr1[randIndex1];
-    let randMessage2 = arr2[randIndex2];
-    let randMessage3 = arr3[randIndex3];
+//iterate over the object and push a random message to array finalMessage
+ for (let prop in messages) {
+    let propIndex = generateRandNumber(messages[prop].length);
+    switch (prop){
+        case 'message1':
+            finalMessage.push(messages[prop][propIndex])
+            break
+        case 'message2':
+            finalMessage.push(messages[prop][propIndex])
+            break
+        case 'message3':
+            finalMessage.push(messages[prop][propIndex])
+            break
+        default:
+            finalMessage.push('Info is missing')
+    }
+ }
 
-    message.push(randMessage1);
-    message.push(randMessage2);
-    message.push(randMessage3);
+//formatting text: concatenate arrays, add quotation mark
+const formatMessage = input =>{
+    input.unshift("'");
+    input.push("'");
 
-    message.unshift("'");
-    message.push("'");
-
-    return message.join(' ');
+    return input.join(' ');
 }
 
-//add new message to arrays
+//add new message to array message1 by changing the value of let inputConsole
+const pushNewMessageToArray = newMessage =>{
+    messages.message1.push(newMessage)
+}
 
-console.log(GenerateRandomMessage(message1,message2,message3))
+let inputConsole = 'No pain no gain'
 
-// create messages with loops and switch
+pushNewMessageToArray (inputConsole);
+
+//prin the final message to the console
+console.log(formatMessage(finalMessage));

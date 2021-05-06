@@ -21,11 +21,14 @@ In further versions new categories will be added:
 
 ## **Steps**
 
-1. Creat 3 arrays with different motivational messages
-2. Creat nested arrays and loop through them 
-3. Put it in a function
-4. return the whole message in a quotation mark
+1. In an object, creat 3 arrays with different motivational messages
+2. Loop through the arrays and push one message from every array to finalMessage
+4. Format output message, return the whole message (.join()) in a 'quotation mark'
+3. Create a function that can add new messages to an array
 4. extra step: Create boolean to chose from different categories
+    1. Add one more category following similar steps
+    2. Boolean choses category based on the selected one (stored in a variable - will handle user input later)
+    3. CHANGE MOTIVATIONAL MESSAGES TO JOKES!!
 
 ## Sentences
 - array1
