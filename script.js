@@ -29,3 +29,4 @@ const GenerateRandomMessage = (arr1, arr2, arr3)=>{
 
 console.log(GenerateRandomMessage(message1,message2,message3))
 
+// create messages with loops and switch
